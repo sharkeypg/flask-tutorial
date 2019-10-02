@@ -11,7 +11,7 @@ def hello():
     return "Goodbye ≈Earth until next time!"
 
 
-@app.route("/api")
+@app.route("/api",methods=["POST"])
 def api():
     x = {'a':1,'b':2}
     return jsonify(x)
