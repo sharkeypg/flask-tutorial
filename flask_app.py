@@ -13,5 +13,5 @@ def hello():
 
 @app.route("/api")
 def api():
-    data = pd.DataFrame({'words':['one','two'], 'numbers':[1,2]})
-    return data.to_json(orient='records')
+    x = {'a':1,'b':2}
+    return jsonify(x)
