@@ -10,8 +10,8 @@ app.config["DEBUG"] = True
 def hello():
     return "Goodbye ≈Earth until next time!"
 
-test_dict = {'a':1, 'b':2}
 
-@app.route("/api",methods=["POST"])
-def json_ify(data=test_dict):
-    return jsonify(data)
+@app.route("/api")
+def api():
+    data = pd.DataFrame({'words':['one','two'], 'numbers':[1,2]})
+    return data.to_json(orient='records')
