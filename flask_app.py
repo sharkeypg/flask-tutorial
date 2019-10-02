@@ -7,4 +7,4 @@ app.config["DEBUG"] = True
 
 @app.route("/")
 def hello():
-    return "Goodbye for now Earth!"
+    return "Goodbye ≈Earth until next time!"
