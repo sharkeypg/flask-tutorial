@@ -10,8 +10,8 @@ app.config["DEBUG"] = True
 def hello():
     return "Goodbye ≈Earth until next time!"
 
-data = {'a':1, 'b':2}
+test_dict = {'a':1, 'b':2}
 
 @app.route("/api")
-def json_ify():
+def json_ify(data=test_dict):
     return jsonify(data)
